@@ -5,6 +5,7 @@ export class User {
     public id: Number,
     public email: string,
     public password: string,
-    public cards: Card[]
+    public cards: Card[],
+    public token?: string
   ) {}
 }

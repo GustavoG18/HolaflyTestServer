@@ -6,4 +6,7 @@ export function setupRoutes(app: any, userController: UserController): void {
   app.get("/cards", authMiddleware, (req: any, res: any) =>
     userController.getAllCards(req, res)
   );
+  app.get("/verfiyToken", authMiddleware, (req: any, res: any) =>
+    res.sendStatus(200)
+  );
 }

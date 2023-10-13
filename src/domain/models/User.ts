@@ -2,7 +2,7 @@ import { Card } from "./Card";
 
 export class User {
   constructor(
-    public id: string,
+    public id: Number,
     public email: string,
     public password: string,
     public cards: Card[]

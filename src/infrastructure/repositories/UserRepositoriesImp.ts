@@ -1,25 +1,112 @@
 import { UserRepository } from "../../domain/ports/UserRepository";
 import { User } from "../../domain/models/User";
 import { Card } from "../../domain/models/Card";
-import fs from "fs";
-import path from "path";
+
+const users = [
+  {
+    id: 1,
+    email: "user_test_1@test.com",
+    password: "123456",
+    cards: [
+      {
+        status: "Expired",
+        dateStart: "01/01/2023",
+        dateEnd: "04/01/2023",
+        comsuption: null,
+        flag: "",
+        country: "Colombia",
+        plan: "4 dias, 3GB",
+      },
+      {
+        status: "Expired",
+        dateStart: "02/01/2023",
+        dateEnd: "02/01/2023",
+        comsuption: null,
+        flag: "",
+        country: "Colombia",
+        plan: "30 dias, 25GB",
+      },
+      {
+        status: "Pending",
+        dateStart: "01/01/2024",
+        dateEnd: null,
+        comsuption: {
+          totalComsumption: 1468006.4,
+        },
+        flag: "",
+        country: "Peru",
+        plan: "1 dia, 1.4GB",
+      },
+      {
+        status: "Active",
+        dateStart: "06/10/2023",
+        dateEnd: "16/10/2023",
+        comsuption: {
+          totalComsumption: 12582912,
+        },
+        flag: "",
+        country: "España",
+        plan: "10 dias, 12GB",
+      },
+    ],
+  },
+  {
+    id: 2,
+    email: "user_test_2@test.com",
+    password: "1234567",
+    cards: [
+      {
+        status: "Expired",
+        dateStart: "01/01/2023",
+        dateEnd: "04/01/2023",
+        comsuption: null,
+        flag: "",
+        country: "Colombia",
+        plan: "4 dias, 3GB",
+      },
+      {
+        status: "Expired",
+        dateStart: "02/01/2023",
+        dateEnd: "02/01/2023",
+        comsuption: null,
+        flag: "",
+        country: "Colombia",
+        plan: "30 dias, 25GB",
+      },
+      {
+        status: "Pending",
+        dateStart: "01/01/2024",
+        dateEnd: null,
+        comsuption: {
+          totalComsumption: 1468006.4,
+        },
+        flag: "",
+        country: "Peru",
+        plan: "1 dia, 1.4GB",
+      },
+      {
+        status: "Active",
+        dateStart: "06/10/2023",
+        dateEnd: "16/10/2023",
+        comsuption: {
+          totalComsumption: 12582912,
+        },
+        flag: "",
+        country: "España",
+        plan: "10 dias, 12GB",
+      },
+    ],
+  },
+];
 
 export class UserRepositoryImp implements UserRepository {
-  private readonly dbPath = path.resolve(__dirname, "../db/data.json");
-
   async findByEmail(email: string): Promise<User | null> {
-    const users = await this.readDb();
-    return users.find((user) => user.email === email) || null;
+    const user = users.find((user) => user.email === email);
+    return user || null;
   }
 
   async getCards(userId: string): Promise<Card[]> {
-    const users = await this.readDb();
-    const user = users.find((user) => user.id == userId);
+    const user = users.find((user) => user.id === Number(userId));
     return user?.cards || [];
-  }
-
-  private async readDb(): Promise<User[]> {
-    const data = await fs.promises.readFile(this.dbPath, "utf-8");
-    return JSON.parse(data);
   }
 }

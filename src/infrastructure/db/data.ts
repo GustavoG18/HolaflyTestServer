@@ -13,7 +13,7 @@ export const users: User[] = [
         dateEnd: "04/01/2023",
         comsuption: null,
         flag: "https://e6b6n7w7.stackpathcdn.com/es/wp-content/uploads/sites/21/2023/05/Mexico.png",
-        country: "Colombia",
+        country: "Mexico",
         plan: "4 dias, 3GB",
       },
       {

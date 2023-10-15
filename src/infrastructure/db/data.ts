@@ -21,8 +21,8 @@ export const users: User[] = [
         dateStart: "02/01/2023",
         dateEnd: "02/01/2023",
         comsuption: null,
-        flag: "https://e6b6n7w7.stackpathcdn.com/es/wp-content/uploads/sites/21/2023/05/Mexico.png",
-        country: "Colombia",
+        flag: "https://e6b6n7w7.stackpathcdn.com/wp-content/uploads/2020/05/United-States.png",
+        country: "USA",
         plan: "30 dias, 25GB",
       },
       {
@@ -32,8 +32,8 @@ export const users: User[] = [
         comsuption: {
           totalComsumption: 1468006.4,
         },
-        flag: "https://e6b6n7w7.stackpathcdn.com/es/wp-content/uploads/sites/21/2023/05/Mexico.png",
-        country: "Peru",
+        flag: "https://e6b6n7w7.stackpathcdn.com/wp-content/uploads/2020/05/United-Kingdom.png",
+        country: "United Kingdown",
         plan: "1 dia, 1.4GB",
       },
       {
@@ -41,10 +41,10 @@ export const users: User[] = [
         dateStart: "06/10/2023",
         dateEnd: "16/10/2023",
         comsuption: {
-          totalComsumption: 12582912,
+          totalComsumption: 4194304,
         },
-        flag: "https://e6b6n7w7.stackpathcdn.com/es/wp-content/uploads/sites/21/2023/05/Mexico.png",
-        country: "España",
+        flag: "https://e6b6n7w7.stackpathcdn.com/wp-content/uploads/2020/05/Japan.png",
+        country: "Japan",
         plan: "10 dias, 12GB",
       },
     ],
@@ -60,17 +60,19 @@ export const users: User[] = [
         dateStart: "01/01/2023",
         dateEnd: "04/01/2023",
         comsuption: null,
-        flag: "",
-        country: "Colombia",
+        flag: "https://e6b6n7w7.stackpathcdn.com/wp-content/uploads/2020/05/Europe.png",
+        country: "Europe",
         plan: "4 dias, 3GB",
       },
       {
-        status: "Expired",
+        status: "Active",
         dateStart: "02/01/2023",
         dateEnd: "02/01/2023",
-        comsuption: null,
-        flag: "",
-        country: "Colombia",
+        comsuption: {
+          totalComsumption: 2468006.4,
+        },
+        flag: "https://e6b6n7w7.stackpathcdn.com/wp-content/uploads/2020/05/Turkey.png",
+        country: "Turkey",
         plan: "30 dias, 25GB",
       },
       {
@@ -80,8 +82,8 @@ export const users: User[] = [
         comsuption: {
           totalComsumption: 1468006.4,
         },
-        flag: "",
-        country: "Peru",
+        flag: "https://e6b6n7w7.stackpathcdn.com/wp-content/uploads/2020/05/Egypt.png",
+        country: "Egypt",
         plan: "1 dia, 1.4GB",
       },
       {
@@ -91,8 +93,8 @@ export const users: User[] = [
         comsuption: {
           totalComsumption: 12582912,
         },
-        flag: "",
-        country: "España",
+        flag: "https://e6b6n7w7.stackpathcdn.com/wp-content/uploads/2020/05/Europe.png",
+        country: "Europe",
         plan: "10 dias, 12GB",
       },
     ],

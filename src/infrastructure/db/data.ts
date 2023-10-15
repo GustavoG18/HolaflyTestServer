@@ -56,7 +56,7 @@ export const users: User[] = [
     password: "1234567",
     cards: [
       {
-        status: "Expired",
+        status: "expired",
         dateStart: "01/01/2023",
         dateEnd: "04/01/2023",
         comsuption: null,
@@ -65,7 +65,7 @@ export const users: User[] = [
         plan: "4 dias, 3GB",
       },
       {
-        status: "Active",
+        status: "active",
         dateStart: "02/01/2023",
         dateEnd: "02/01/2023",
         comsuption: {
@@ -76,7 +76,7 @@ export const users: User[] = [
         plan: "30 dias, 25GB",
       },
       {
-        status: "Pending",
+        status: "pending",
         dateStart: "01/01/2024",
         dateEnd: null,
         comsuption: {
@@ -87,7 +87,7 @@ export const users: User[] = [
         plan: "1 dia, 1.4GB",
       },
       {
-        status: "Active",
+        status: "active",
         dateStart: "06/10/2023",
         dateEnd: "16/10/2023",
         comsuption: {
